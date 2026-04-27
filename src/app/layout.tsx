@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     default: 'AILCN',
     template: '%s',
   },
+  icons: {
+    icon: '/ailcn-icon.png',
+    shortcut: '/ailcn-icon.png',
+    apple: '/ailcn-icon.png',
+  },
 };
 
 export default function RootLayout({

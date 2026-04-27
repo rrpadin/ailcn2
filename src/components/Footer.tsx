@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { CTAButton } from '@/components/CTAButton';
 import { LINKS } from '@/lib/links';
@@ -17,7 +18,16 @@ export function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
-            <p className="text-3xl font-bold">AILCN</p>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/ailcn-icon.png"
+                alt="AILCN logo"
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-xl"
+              />
+              <p className="text-3xl font-bold">AILCN</p>
+            </div>
             <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-blue">
               The AI Learning Consultant Network
             </p>

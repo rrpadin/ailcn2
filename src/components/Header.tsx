@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -55,10 +56,19 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between py-4">
         <Link
-          className="text-2xl font-bold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+          className="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           href="/"
+          aria-label="AILCN homepage"
         >
-          AILCN
+          <Image
+            src="/ailcn-icon.png"
+            alt="AILCN logo"
+            width={48}
+            height={48}
+            className="h-12 w-12 rounded-xl"
+            priority
+          />
+          <span className="text-2xl font-bold text-white">AILCN</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {navLinks.map((link) => (
