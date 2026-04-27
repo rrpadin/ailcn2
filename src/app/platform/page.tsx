@@ -131,10 +131,7 @@ export default function PlatformPage() {
 
       <Section background="navy">
         <div className="max-w-4xl">
-          <SectionHeading headline="See the platform in action." />
-          <p className="text-xl leading-8 text-white/80">
-            Sample report from a real (anonymized) engagement.
-          </p>
+          <SectionHeading headline="Learn more about ExpandPro." />
           <div className="mt-10">
             <CTAButton
               href={LINKS.expandproSite}
