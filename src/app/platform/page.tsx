@@ -63,8 +63,8 @@ export default function PlatformPage() {
           </p>
         }
         primaryCta={{
-          href: LINKS.seeSampleReport,
-          label: 'See a sample report',
+          href: LINKS.expandproSite,
+          label: 'Visit ExpandPro.ai',
         }}
       />
 
@@ -135,14 +135,7 @@ export default function PlatformPage() {
           <p className="text-xl leading-8 text-white/80">
             Sample report from a real (anonymized) engagement.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <CTAButton
-              href={LINKS.seeSampleReport}
-              variant="primary"
-              ariaLabel="See a sample report"
-            >
-              See a sample report
-            </CTAButton>
+          <div className="mt-10">
             <CTAButton
               href={LINKS.expandproSite}
               variant="secondary"
