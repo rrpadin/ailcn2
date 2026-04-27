@@ -4,8 +4,8 @@ export const LINKS = {
   applyFoundingCohort: 'https://expandpro.ai/apply',
   paidTrack: 'https://expandpro.ai/apply',
   earnedTrack: 'https://expandpro.ai/apply',
-  talkToFounder: 'https://example.com/talk-to-founder',
+  talkToFounder: 'mailto:contact@ailcn.org?subject=AILCN%20Founder%20Inquiry',
   seeSampleReport: 'https://example.com/sample-report',
-  newsletter: 'https://example.com/newsletter',
+  newsletter: 'mailto:contact@ailcn.org?subject=AILCN%20Newsletter%20Subscription',
   expandproSite: 'https://expandpro.ai',
 } as const;
