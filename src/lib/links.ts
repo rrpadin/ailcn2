@@ -8,4 +8,5 @@ export const LINKS = {
   seeSampleReport: 'https://example.com/sample-report',
   newsletter: 'mailto:contact@ailcn.org?subject=AILCN%20Newsletter%20Subscription',
   expandproSite: 'https://expandpro.ai',
+  expandproDiagnostic: 'https://expandpro.ai/diagnostic',
 } as const;

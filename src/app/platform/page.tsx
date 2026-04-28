@@ -63,7 +63,7 @@ export default function PlatformPage() {
           </p>
         }
         primaryCta={{
-          href: LINKS.expandproSite,
+          href: LINKS.expandproDiagnostic,
           label: 'Visit ExpandPro.ai',
         }}
       />
@@ -134,7 +134,7 @@ export default function PlatformPage() {
           <SectionHeading headline="Learn more about ExpandPro." />
           <div className="mt-10">
             <CTAButton
-              href={LINKS.expandproSite}
+              href={LINKS.expandproDiagnostic}
               variant="secondary"
               ariaLabel="Visit ExpandPro.ai"
             >
