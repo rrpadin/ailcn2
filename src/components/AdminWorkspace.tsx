@@ -586,7 +586,7 @@ export function AdminWorkspace() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-navy/10 bg-white p-8">
+      <div id="leads" className="rounded-2xl border border-navy/10 bg-white p-8">
         <PanelHeading
           icon={Users}
           title="Lead capture"

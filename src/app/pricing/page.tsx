@@ -143,20 +143,13 @@ export default function PricingPage() {
 
       <Section background="off-white">
         <SectionHeading headline="Ready to start?" />
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div>
           <CTAButton
             href={LINKS.startCertification}
             variant="primary"
             ariaLabel="Start your certification"
           >
             Start your certification
-          </CTAButton>
-          <CTAButton
-            href={LINKS.talkToFounder}
-            variant="secondary"
-            ariaLabel="Talk to a founder"
-          >
-            Talk to a founder
           </CTAButton>
         </div>
       </Section>

@@ -283,20 +283,13 @@ export default function HomePage() {
           <p className="text-xl leading-8 text-white/80">
             Decide whether you&apos;re writing it or watching it.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10">
             <CTAButton
               href={LINKS.startCertification}
               variant="primary"
               ariaLabel="Start your certification"
             >
               Start your certification
-            </CTAButton>
-            <CTAButton
-              href={LINKS.talkToFounder}
-              variant="secondary"
-              ariaLabel="Talk to a founder"
-            >
-              Talk to a founder
             </CTAButton>
           </div>
         </div>

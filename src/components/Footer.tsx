@@ -71,12 +71,6 @@ export function Footer() {
                 Subscribe
               </CTAButton>
             </div>
-            <a
-              className="mt-6 inline-block text-base text-white/80 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-              href={LINKS.talkToFounder}
-            >
-              Talk to a founder
-            </a>
           </div>
         </div>
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/70 md:flex-row md:items-center md:justify-between">

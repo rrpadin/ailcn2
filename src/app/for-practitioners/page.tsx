@@ -332,20 +332,13 @@ export default function PractitionersPage() {
             aren&apos;t actually better than you. Application takes 12 minutes. We respond within
             two business days.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10">
             <CTAButton
               href={LINKS.startCertification}
               variant="primary"
               ariaLabel="Apply to the Network"
             >
               Apply to the Network
-            </CTAButton>
-            <CTAButton
-              href={LINKS.talkToFounder}
-              variant="secondary"
-              ariaLabel="Talk to a founder"
-            >
-              Talk to a founder
             </CTAButton>
           </div>
         </div>
