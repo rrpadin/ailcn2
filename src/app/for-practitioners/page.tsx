@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'For Practitioners — AILCN',
   description:
-    'For independent and boutique L&D consultants who want the firepower of a 50-person consultancy without giving up their independence.',
+    'For independent and boutique HR and L&D consultants who want the firepower of a 50-person consultancy without giving up their independence.',
 };
 
 const asymmetries = [
