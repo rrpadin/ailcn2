@@ -220,7 +220,7 @@ export default function PractitionersPage() {
           <SectionHeading headline="See if you're ready." />
           <p className="text-xl leading-8 text-white/80">
             Or three months from now, you can still be losing the same deals to firms that
-            aren&apos;t actually better than you. Application takes 12 minutes. We respond within
+            aren&apos;t actually better than you. Assessment takes a few minutes. We respond within
             two business days.
           </p>
           <div className="mt-10">
