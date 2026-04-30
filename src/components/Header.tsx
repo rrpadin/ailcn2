@@ -12,6 +12,7 @@ import { LINKS } from '@/lib/links';
 const navLinks = [
   { href: '/program', label: 'Program' },
   { href: '/platform', label: 'Platform' },
+  { href: '/for-practitioners', label: 'Practitioners' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
 ];
