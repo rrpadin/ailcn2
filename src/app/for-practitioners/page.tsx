@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 
 import { Card } from '@/components/Card';
 import { CTAButton } from '@/components/CTAButton';
@@ -76,60 +75,6 @@ const afterItems = [
   'Your average engagement size is 3x larger. Your renewal rate is above 90%.',
 ];
 
-const tiers = [
-  {
-    eyebrow: 'Tier I - Certified',
-    title: 'Year 1 - Building Your Practice',
-    body: (
-      <>
-        <p className="text-4xl font-bold leading-none text-blue">$62K</p>
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/65">
-          Net annual earnings
-        </p>
-        <p>
-          Your first year. You close 4 Discovery Sprints and 2 Program Architectures. You convert
-          3 to Foundations subscriptions. You take home the equivalent of a senior consulting salary
-          while building equity in your own book of business.
-        </p>
-      </>
-    ),
-  },
-  {
-    eyebrow: 'Tier II - Senior',
-    title: 'Year 3 - Steady State',
-    body: (
-      <>
-        <p className="text-4xl font-bold leading-none text-blue">$434K</p>
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/65">
-          Net annual earnings
-        </p>
-        <p>
-          By Year 3, you&apos;ve earned promotion to Senior. Engagement split rises to 70/30, trail
-          to 12%. You&apos;re running 12 active subscriptions, delivering Workforce Transformations,
-          and offering outcomes-priced contracts. This is what a real practice looks like.
-        </p>
-      </>
-    ),
-  },
-  {
-    eyebrow: 'Tier III - Principal',
-    title: 'Year 5+ - Mature Practice',
-    body: (
-      <>
-        <p className="text-4xl font-bold leading-none text-blue">$1.0M+</p>
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/65">
-          Net annual earnings
-        </p>
-        <p>
-          Principal tier. 78% engagement share, 15% trail, 60-month duration. White-label rights.
-          Co-development revenue. Equity participation pool. You&apos;re running a $1M+ practice
-          with a fraction of the overhead of an independent firm.
-        </p>
-      </>
-    ),
-  },
-];
-
 const principles = [
   {
     title: 'You are a licensed practitioner, not a sales rep.',
@@ -151,15 +96,6 @@ const principles = [
     title: 'Tier metrics are objective and protected.',
     body: 'Promotion criteria are published. Downgrades require sustained underperformance, not a single bad quarter. If we approve a strategic discount, AILCN absorbs more of the cost than you do. The rules are written so you can plan against them.',
   },
-];
-
-const faqQuestions = [
-  'Will I become a "platform reseller" instead of a consultant?',
-  'What happens if I leave AILCN — do I lose my client relationships?',
-  'Is the platform fee really $24,999 plus $1,999/year?',
-  'What if I\'m a senior consultant with 20+ years of experience? Do I have to start at Certified?',
-  'How much time will I spend learning the platform before I can deliver work?',
-  'What kind of consultants does AILCN want?',
 ];
 
 export default function PractitionersPage() {
@@ -191,7 +127,7 @@ export default function PractitionersPage() {
       <Section background="off-white" narrow>
         <PullQuote
           quote='"The independent L&D consultant has been structurally outmatched for thirty years. The platform changes the math."'
-          attribution="Dr. Reggie Padin · Founder, ExpandPro"
+          attribution="Dr. Reggie Padin · Founder, AILCN"
         />
       </Section>
 
@@ -265,34 +201,6 @@ export default function PractitionersPage() {
         </div>
       </Section>
 
-      <Section background="navy">
-        <SectionHeading headline="Three tiers. Each one earns you more share as you scale." />
-        <p className="mb-10 max-w-4xl text-lg leading-8 text-white/80">
-          Most channel programs take a larger cut as you grow. AILCN does the opposite — the
-          consultants who deliver more, retain more clients, and contribute more to the network
-          earn a higher percentage.
-        </p>
-        <div className="grid gap-6 md:grid-cols-3">
-          {tiers.map((tier) => (
-            <Card
-              key={tier.title}
-              eyebrow={tier.eyebrow}
-              title={tier.title}
-              body={tier.body}
-              variant="on-navy"
-            />
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link
-            className="inline-flex text-base font-semibold text-blue transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-            href="/pricing"
-          >
-            See pricing and tiers
-          </Link>
-        </div>
-      </Section>
-
       <Section background="off-white">
         <SectionHeading headline="The principles AILCN is built on." />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -307,26 +215,9 @@ export default function PractitionersPage() {
         </div>
       </Section>
 
-      <Section background="off-white" narrow>
-        <SectionHeading headline="Questions practitioners actually ask." />
-        <p className="mb-8 text-lg leading-8 text-navy/85">
-          The straight answers belong in the conversation. These are the questions serious
-          practitioners usually bring into the room first.
-        </p>
-        <div className="rounded-2xl border border-navy/10 bg-white p-8">
-          <ul className="space-y-5 text-lg leading-8 text-navy/85">
-            {faqQuestions.map((question) => (
-              <li key={question} className="border-b border-navy/10 pb-5 last:border-b-0 last:pb-0">
-                {question}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
       <Section background="navy">
         <div className="max-w-4xl">
-          <SectionHeading headline="Three months from now, you can be running engagements that look like Tier-1 consulting." />
+          <SectionHeading headline="See if you're ready." />
           <p className="text-xl leading-8 text-white/80">
             Or three months from now, you can still be losing the same deals to firms that
             aren&apos;t actually better than you. Application takes 12 minutes. We respond within
@@ -336,9 +227,9 @@ export default function PractitionersPage() {
             <CTAButton
               href={LINKS.startCertification}
               variant="primary"
-              ariaLabel="Apply to the Network"
+              ariaLabel="Take the assessment"
             >
-              Apply to the Network
+              Take the assessment
             </CTAButton>
           </div>
         </div>

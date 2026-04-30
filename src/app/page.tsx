@@ -162,7 +162,7 @@ export default function HomePage() {
           </div>
           <PullQuote
             quote='"The independent L&D consultant has been structurally outmatched for thirty years. The platform changes the math."'
-            attribution="Dr. Reggie Padin · Founder, ExpandPro"
+            attribution="Dr. Reggie Padin · Founder, AILCN"
           />
         </div>
       </Section>
@@ -256,44 +256,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section background="off-white" narrow>
-        <SectionHeading headline="The first dozen are setting the standard." />
-        <div className="space-y-6 text-lg leading-8 text-navy/85">
-          <p>
-            AILCN is in pilot. The founding cohort — twelve consultants — is closing real
-            engagements with real mid-market clients right now. Their feedback shapes the platform.
-            Their work calibrates the certification. Their results validate the model.
-          </p>
-          <p>Public certification opens later this year. If you&apos;re reading this, you&apos;re early.</p>
-        </div>
-        <div className="mt-8">
-          <CTAButton
-            href={LINKS.applyFoundingCohort}
-            variant="primary"
-            ariaLabel="Apply for the founding cohort"
-          >
-            Apply for the founding cohort
-          </CTAButton>
-        </div>
-      </Section>
-
-      <Section background="navy">
-        <div className="max-w-4xl">
-          <SectionHeading headline="The standard for independent HR consulting is being written right now." />
-          <p className="text-xl leading-8 text-white/80">
-            Decide whether you&apos;re writing it or watching it.
-          </p>
-          <div className="mt-10">
-            <CTAButton
-              href={LINKS.startCertification}
-              variant="primary"
-              ariaLabel="Start your certification"
-            >
-              Start your certification
-            </CTAButton>
-          </div>
-        </div>
-      </Section>
     </>
   );
 }
