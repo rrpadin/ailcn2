@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
-import { Check, X } from 'lucide-react';
+import { Check, ChevronDown, X } from 'lucide-react';
 
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
@@ -94,14 +94,9 @@ const certificationRows: ReactNode[][] = [
 
 const renewalRows: ReactNode[][] = [
   [
-    <RowLabel key="annual-recertification">Annual recertification</RowLabel>,
-    '$1,295/year',
-    'Updated methodology, new benchmarks, network access continuation',
-  ],
-  [
-    <RowLabel key="auto-renew">Auto-renew discount</RowLabel>,
-    '$1,295/year (save $121)',
-    'Same as above, billed automatically annually',
+    <RowLabel key="annual-license">Annual</RowLabel>,
+    '$1,495/year',
+    'Updated methodology, new benchmarks, network access continuation, billed automatically annually',
   ],
 ];
 
@@ -159,6 +154,39 @@ const serviceRows: ReactNode[][] = [
     '$3K-$8K',
     'Standalone organizational health time-series baseline.',
   ],
+];
+
+const faqItems = [
+  {
+    question: 'Will I become a "platform reseller" instead of a consultant?',
+    answer:
+      'No. AILCN is built so you remain the trusted advisor. ExpandPro helps you produce evidence, benchmarks, artifacts, and meeting prep faster, but the strategy, recommendation, and client relationship are still yours.',
+  },
+  {
+    question: 'What happens if I stop renewing or leave the network?',
+    answer:
+      'Your client relationships remain yours. Non-renewal triggers a 90-day grace period, then platform access is suspended until you renew again.',
+  },
+  {
+    question: 'Why would someone choose Fast-Track over the free path?',
+    answer:
+      'If you already have an active pipeline and expect to close multiple deals quickly, Fast-Track usually wins on economics. You start at 70% from Day 1 and add weekly live Q&A plus faster support.',
+  },
+  {
+    question: 'What does the annual ExpandPro renewal actually cover?',
+    answer:
+      'The $1,495 annual renewal keeps your platform access active and keeps your methodology, benchmarks, and network access current for the year ahead.',
+  },
+  {
+    question: 'How long does certification take before I can use it?',
+    answer:
+      'The certification is designed as a 60-day path. Both pricing options lead to the same AILCN certification and the same core platform access.',
+  },
+  {
+    question: 'What kind of consultant is AILCN built for?',
+    answer:
+      'AILCN is built for serious independent consultants who already know how to run a real engagement and want stronger artifacts, better economics, and a defensible standard behind their work.',
+  },
 ];
 
 function RowLabel({ children }: { children: ReactNode }) {
@@ -237,6 +265,29 @@ function IncludedItem({ children }: { children: ReactNode }) {
   );
 }
 
+function FaqItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  return (
+    <details className="group rounded-2xl border border-white/10 bg-navy-soft">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-6 text-left text-lg font-semibold leading-7 text-white marker:content-none">
+        <span>{question}</span>
+        <ChevronDown
+          className="h-5 w-5 shrink-0 text-blue transition-transform duration-200 group-open:rotate-180"
+          aria-hidden="true"
+        />
+      </summary>
+      <div className="px-6 pb-6 text-base leading-8 text-white/80">
+        <p>{answer}</p>
+      </div>
+    </details>
+  );
+}
+
 export default function PricingPage() {
   return (
     <>
@@ -275,9 +326,9 @@ export default function PricingPage() {
       </Section>
 
       <Section background="off-white">
-        <SectionHeading headline="Annual renewal (Year 2+)" />
+        <SectionHeading headline="Annual ExpandPro renewal (Year 2+)" />
         <p className="mb-8 max-w-4xl text-lg leading-8 text-navy/85">
-          Maintain your certification and platform access
+          Maintain platform access
         </p>
         <PricingTable
           caption="Annual renewal pricing"
@@ -285,8 +336,7 @@ export default function PricingPage() {
           rows={renewalRows}
         />
         <p className="mt-6 text-base italic leading-7 text-navy/65">
-          Non-renewal triggers a 90-day grace period, then account suspension. AILCN consultants
-          are AILCN-certified or they&apos;re not — there&apos;s no quiet middle.
+          Non-renewal triggers a 90-day grace period, then account suspension.
         </p>
       </Section>
 
@@ -313,6 +363,15 @@ export default function PricingPage() {
           columns={['SERVICE', 'PRICE', 'WHEN TO USE IT']}
           rows={serviceRows}
         />
+      </Section>
+
+      <Section background="navy">
+        <SectionHeading headline="The straight answers." />
+        <div className="grid gap-4">
+          {faqItems.map((item) => (
+            <FaqItem key={item.question} question={item.question} answer={item.answer} />
+          ))}
+        </div>
       </Section>
     </>
   );
