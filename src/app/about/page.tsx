@@ -77,12 +77,8 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="mt-8">
-          <CTAButton
-            href={LINKS.applyFoundingCohort}
-            variant="primary"
-            ariaLabel="Apply for the founding cohort"
-          >
-            Apply for the founding cohort
+          <CTAButton href={LINKS.apply} variant="primary" ariaLabel="Apply to the network">
+            Apply to the network →
           </CTAButton>
         </div>
       </Section>

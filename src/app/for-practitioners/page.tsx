@@ -13,27 +13,27 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'For Practitioners — AILCN',
   description:
-    'For independent and boutique HR and Learning and Development consultants who want the firepower of a 50-person consultancy without giving up their independence.',
+    'For independent and boutique L&D consultants who want the firepower of a 50-person consultancy without giving up their independence.',
 };
 
 const asymmetries = [
   {
-    eyebrow: 'Asymmetry I',
+    eyebrow: 'ASYMMETRY I',
     title: "You can't produce the artifacts.",
     body: 'A solo consultant cannot generate a 60-page diagnostic with documented causal inference, Monte Carlo simulations, and CFO-ready investment memos in two weeks. The big firms can — they have analysts. So you compete on charm and fees. They compete on artifacts the buyer\'s CFO actually trusts.',
   },
   {
-    eyebrow: 'Asymmetry II',
+    eyebrow: 'ASYMMETRY II',
     title: "You can't cite the network.",
-    body: 'When the client asks "how do we know this will work for us?" the big firm says "we\'ve done this 47 times across comparable companies and the average effect size was 0.42sigma." You say "in my experience..." which is, however hard-earned, not the same answer.',
+    body: 'When the client asks "how do we know this will work for us?" the big firm says "we\'ve done this 47 times across comparable companies and the average effect size was 0.42σ." You say "in my experience..." which is, however hard-earned, not the same answer.',
   },
   {
-    eyebrow: 'Asymmetry III',
+    eyebrow: 'ASYMMETRY III',
     title: "You can't speak CFO fluently.",
     body: 'Your work gets stuck at the CHRO. The CFO kills the renewal because nobody translated the program outcomes into NPV, IRR, and risk-adjusted return. You know it should be funded. You can\'t make the financial case the way it needs to be made.',
   },
   {
-    eyebrow: 'Asymmetry IV',
+    eyebrow: 'ASYMMETRY IV',
     title: "You're spending 40% of your time on undifferentiated work.",
     body: 'Diagnostic intake, KPI calculation, benchmark research, measurement design. None of this differentiates you. All of it is necessary. The big firms have analysts doing it for them so the principals can spend 100% of their time on the work that actually wins. You don\'t have that.',
   },
@@ -41,19 +41,37 @@ const asymmetries = [
 
 const agents = [
   {
-    eyebrow: 'Agent 01 - Diagnostic',
+    eyebrow: 'AGENT 01 — DIAGNOSTIC',
     title: 'The analyst pool that produces decision-grade evidence.',
     body: 'Causal inference across the 10 KPIs. 12-month forecasts under three scenarios. Bottleneck identification grounded in the network. Anomaly detection. Benchmark stratification by industry and size. Continuously, on every client you serve.',
   },
   {
-    eyebrow: 'Agent 02 - Prescriptive',
+    eyebrow: 'AGENT 02 — PRESCRIPTIVE',
     title: 'The associate principal who writes investment memos in your voice.',
     body: 'Full Program Architecture Documents with measurement blueprints, manager enablement tracks, pre-mortem risk analysis, and Capital Investment Memos with NPV, IRR, and Monte Carlo simulation. Generated in hours, not weeks.',
   },
   {
-    eyebrow: 'Agent 03 - Strategic',
+    eyebrow: 'AGENT 03 — STRATEGIC',
     title: 'The chief of staff who keeps you ahead of every meeting.',
     body: 'Monday morning 90-day outlooks. Stakeholder strategy briefs. Competitive intelligence on the firms you\'re up against. Objection pre-loaders. Credibility artifacts designed to survive forwarding. The meeting prep you wish you had time for.',
+  },
+];
+
+const underneathBlocks = [
+  {
+    eyebrow: 'THE 10-KPI FRAMEWORK',
+    title: 'The operating framework behind every recommendation.',
+    body: 'Every diagnostic, every benchmark, every recommendation runs through the same 10 KPIs that define the operational territory of HR consulting: turnover, engagement, succession, capability, performance, compensation, learning, leadership, culture, and organizational health. AILCN consultants measure to the same definitions. Your client gets the same rigor whether they engage with you or with another AILCN consultant.',
+  },
+  {
+    eyebrow: 'THE 5 HEALTH DIMENSIONS',
+    title: 'The time-series view of whether the organization is healthier.',
+    body: 'Stacked on top of the 10 KPIs is a 5-dimension organizational health framework — the time-series baseline that tells a CHRO whether the org is getting healthier or sicker over time. The Health Metrics Assessment is the standalone product that uses this framework. It\'s also embedded in every Comprehensive Engagement.',
+  },
+  {
+    eyebrow: 'THE NETWORK BENCHMARK LIBRARY',
+    title: 'The benchmark moat a solo consultant cannot build alone.',
+    body: 'AILCN consultants contribute anonymized engagement data to a shared benchmark library that grows with every closed engagement. Your reports cite cross-engagement patterns no solo consultant could build alone — and the more the network grows, the sharper your benchmarks get. This is the moat that competitors can\'t copy.',
   },
 ];
 
@@ -75,10 +93,38 @@ const afterItems = [
   'Your average engagement size is 3x larger. Your renewal rate is above 90%.',
 ];
 
+const featureCards = [
+  {
+    eyebrow: 'AI AGENTS',
+    title: 'Three agents, one analyst pool.',
+    body: 'Diagnostic, Prescriptive, and Strategic agents — running continuously on every client you serve.',
+  },
+  {
+    eyebrow: 'EXPANDINTELLIGENCE BRIEFS',
+    title: 'Quarterly research your clients can forward.',
+    body: 'Quarterly intelligence briefs that synthesize cross-network patterns into trend analysis you can hand to clients. Original research, not regurgitated. Designed to be forwarded to prospects.',
+  },
+  {
+    eyebrow: 'PREDICTIVE MODELS',
+    title: 'Forecasting that travels into the room.',
+    body: 'Workforce capability forecasts. Turnover risk modeling. Succession bench-strength projections. Used both inside engagements and as standalone deliverables.',
+  },
+  {
+    eyebrow: 'LEAD MAGNETS',
+    title: 'Prospecting assets that open the door.',
+    body: 'Pre-built diagnostic intakes, benchmark snapshots, and one-pagers you can send to prospects to start conversations. Branded with your name, generated by the platform.',
+  },
+  {
+    eyebrow: 'AILCN CONNECT',
+    title: 'The network behind the credential.',
+    body: 'The community of certified AILCN consultants — peer review on hard cases, referrals when an engagement is outside your wheelhouse, shared patterns across the network.',
+  },
+];
+
 const principles = [
   {
     title: 'You are a licensed practitioner, not a sales rep.',
-    body: 'Sales reps earn 10–20% on commission. Practitioners earn 60–78% on engagement work because they do the work and own the relationship. We frame the deal that way because that\'s what\'s true.',
+    body: 'Sales reps earn 10-20% on commission. Practitioners earn 40-70% on engagement work because they do the work and own the relationship. We frame the deal that way because that\'s what\'s true.',
   },
   {
     title: 'Your relationship with your client belongs to you.',
@@ -102,21 +148,18 @@ export default function PractitionersPage() {
   return (
     <>
       <Hero
-        eyebrow="For Practitioners"
+        eyebrow="FOR PRACTITIONERS"
         headline="Show up to every engagement with the firepower of a 50-person consultancy."
         subhead={
-          <>
-            <p className="font-semibold text-white">For independent and boutique L&D consultants.</p>
-            <p className="mt-4">
-              You&apos;re as smart as the McKinsey senior consultant on the other side of the table.
-              You have deeper subject-matter expertise. But you can&apos;t produce a 60-page
-              diagnostic with Monte Carlo simulations in two weeks. AILCN exists so you can.
-            </p>
-          </>
+          <p>
+            You&apos;re as smart as the McKinsey senior consultant on the other side of the table.
+            You have deeper subject-matter expertise. But you can&apos;t produce a 60-page
+            diagnostic with Monte Carlo simulations in two weeks. AILCN exists so you can.
+          </p>
         }
         primaryCta={{
-          href: LINKS.startCertification,
-          label: 'Apply to the Network',
+          href: LINKS.apply,
+          label: 'Apply to the network →',
         }}
         secondaryCta={{
           href: '/pricing',
@@ -151,7 +194,7 @@ export default function PractitionersPage() {
         </div>
       </Section>
 
-      <Section background="navy">
+      <Section background="navy" id="agents">
         <SectionHeading headline="AILCN gives you what the big firms have. Without working for them." />
         <p className="mb-10 max-w-4xl text-lg leading-8 text-white/80">
           You retain your independence, your relationships, and your brand. You add three AI
@@ -172,43 +215,18 @@ export default function PractitionersPage() {
       </Section>
 
       <Section background="off-white">
-        <SectionHeading headline="What changes between Tuesday and the Tuesday after you join." />
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card
-            eyebrow="Tuesday before"
-            title="The way it currently works."
-            body={
-              <ul className="space-y-4">
-                {beforeItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            }
-            variant="on-light"
-          />
-          <Card
-            eyebrow="Tuesday after"
-            title="The way it works on AILCN."
-            body={
-              <ul className="space-y-4">
-                {afterItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            }
-            variant="on-light"
-          />
-        </div>
-      </Section>
-
-      <Section background="off-white">
-        <SectionHeading headline="The principles AILCN is built on." />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {principles.map((principle) => (
+        <SectionHeading headline="What's underneath the agents." />
+        <p className="mb-10 max-w-4xl text-lg leading-8 text-navy/85">
+          The agents only work because of what&apos;s underneath them. AILCN&apos;s methodology and
+          network are what make the platform&apos;s outputs defensible — not just sophisticated.
+        </p>
+        <div className="grid gap-6 md:grid-cols-3">
+          {underneathBlocks.map((block) => (
             <Card
-              key={principle.title}
-              title={principle.title}
-              body={<p>{principle.body}</p>}
+              key={block.title}
+              eyebrow={block.eyebrow}
+              title={block.title}
+              body={<p>{block.body}</p>}
               variant="on-light"
             />
           ))}
@@ -216,20 +234,82 @@ export default function PractitionersPage() {
       </Section>
 
       <Section background="navy">
+        <SectionHeading headline="What changes between Tuesday and the Tuesday after you join." />
+        <p className="mb-10 max-w-4xl text-lg leading-8 text-white/80">
+          Same week. Different practice.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card
+            eyebrow="TUESDAY BEFORE"
+            title="The way it currently works."
+            body={
+              <ul className="space-y-4 text-white/85">
+                {beforeItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            }
+            variant="on-navy"
+          />
+          <Card
+            eyebrow="TUESDAY AFTER"
+            title="The way it works on AILCN."
+            body={
+              <ul className="space-y-4 text-white/85">
+                {afterItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            }
+            variant="on-navy"
+          />
+        </div>
+      </Section>
+
+      <Section background="off-white">
+        <SectionHeading headline="What ships with every account — both paths." />
+        <p className="mb-10 max-w-4xl text-lg leading-8 text-navy/85">
+          Whether you start on Fast-Track or Earn-As-You-Grow, the platform behind your practice is
+          the same. The path is about timing and economics; the platform is about output.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {featureCards.map((feature) => (
+            <Card
+              key={feature.title}
+              eyebrow={feature.eyebrow}
+              title={feature.title}
+              body={<p>{feature.body}</p>}
+              variant="on-light"
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section background="navy">
+        <SectionHeading headline="The principles AILCN is built on." />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {principles.map((principle) => (
+            <Card
+              key={principle.title}
+              title={principle.title}
+              body={<p>{principle.body}</p>}
+              variant="on-navy"
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section background="off-white">
         <div className="max-w-4xl">
           <SectionHeading headline="See if you're ready." />
-          <p className="text-xl leading-8 text-white/80">
+          <p className="text-xl leading-8 text-navy/85">
             Or three months from now, you can still be losing the same deals to firms that
             aren&apos;t actually better than you. Assessment takes a few minutes. We respond within
             two business days.
           </p>
           <div className="mt-10">
-            <CTAButton
-              href={LINKS.startCertification}
-              variant="primary"
-              ariaLabel="Take the assessment"
-            >
-              Take the assessment
+            <CTAButton href={LINKS.apply} variant="primary" ariaLabel="Apply to the network">
+              Apply to the network →
             </CTAButton>
           </div>
         </div>

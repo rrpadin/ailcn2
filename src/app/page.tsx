@@ -32,75 +32,38 @@ export const metadata: Metadata = {
   },
 };
 
-const asymmetryCards = [
-  {
-    eyebrow: 'Asymmetry I',
-    title: "You can't produce the artifacts.",
-    body: 'A solo consultant cannot generate a 60-page diagnostic with documented causal inference, Monte Carlo simulations, and CFO-ready investment memos in two weeks. The big firms can — they have analysts. So you compete on charm and fees. They compete on artifacts the buyer\'s CFO actually trusts.',
-  },
-  {
-    eyebrow: 'Asymmetry II',
-    title: "You can't cite the network.",
-    body: 'When the client asks "how do we know this will work for us?" the big firm says "we\'ve done this 47 times across comparable companies and the average effect size was 0.42sigma." You say "in my experience..." which is, however hard-earned, not the same answer.',
-  },
-  {
-    eyebrow: 'Asymmetry III',
-    title: "You can't speak CFO fluently.",
-    body: 'Your work gets stuck at the CHRO. The CFO kills the renewal because nobody translated the program outcomes into NPV, IRR, and risk-adjusted return. You know it should be funded. You can\'t make the financial case the way it needs to be made.',
-  },
-  {
-    eyebrow: 'Asymmetry IV',
-    title: "You're spending 40% of your time on undifferentiated work.",
-    body: 'Diagnostic intake, KPI calculation, benchmark research, measurement design. None of this differentiates you. All of it is necessary. The big firms have analysts doing it for them so the principals can spend 100% of their time on the work that actually wins. You don\'t have that.',
-  },
-];
-
-const agentCards = [
-  {
-    eyebrow: 'Agent 01 - Diagnostic',
-    title: 'Decision-grade evidence on every client.',
-    body: 'Causal inference across the 10 KPIs. 12-month forecasts under three scenarios. Bottleneck identification grounded in the network. Anomaly detection. Benchmark stratification by industry and size. Continuously, on every client you serve.',
-  },
-  {
-    eyebrow: 'Agent 02 - Prescriptive',
-    title: 'Investment memos in your voice.',
-    body: 'Full Program Architecture Documents with measurement blueprints, manager enablement tracks, pre-mortem risk analysis, and Capital Investment Memos with NPV, IRR, and Monte Carlo simulation. Generated in hours, not weeks.',
-  },
-  {
-    eyebrow: 'Agent 03 - Strategic',
-    title: 'Meeting prep that keeps you ahead.',
-    body: 'Monday morning 90-day outlooks. Stakeholder strategy briefs. Competitive intelligence on the firms you\'re up against. Objection pre-loaders. Credibility artifacts designed to survive forwarding. The meeting prep you wish you had time for.',
-  },
-];
-
-const networkPillars = [
-  {
-    eyebrow: 'Certification',
-    title: 'The standard your client can recognize.',
-    body: 'A 60-day program built around the AILCN methodology so the work behind your engagements meets a real bar. The credential is what tells the market your output is defensible.',
-  },
-  {
-    eyebrow: 'Platform',
-    title: 'The analyst pool behind your practice.',
-    body: 'ExpandPro handles intake, diagnostics, benchmark comparisons, reporting, and ongoing measurement so you can show up with the firepower of a firm without working for one.',
-  },
-  {
-    eyebrow: 'Network',
-    title: 'The evidence you can cite.',
-    body: 'Cross-engagement benchmarks, peer review of hard cases, shared patterns, and referrals between consultants. The network compounds — and your work gets stronger because the network is in it.',
-  },
+const deliverables = [
+  'Performance Diagnostic — free. The top-of-funnel intake every prospect should run.',
+  'Deep-Dive KPI Assessment — $1.5K-$5K per KPI. The small first engagement that converts prospects into clients.',
+  'Comprehensive Engagement — $12K-$75K flat. The flagship deliverable: full 10-KPI assessment with executive summary and intervention recommendations.',
+  'ExpandPro Platform subscription — $500-$8K/month. Continuous measurement for clients who want their KPIs tracked between engagements.',
+  'Health Metrics Assessment — $3K-$8K. Standalone organizational health time-series baseline.',
 ];
 
 const pathCards = [
   {
-    eyebrow: 'Path A - Paid track',
-    title: 'Move fast.',
-    body: 'Move fast. $2,500 self-paced or $4,500 with higher-touch coaching. Full CERTIFIED platform features unlock immediately while you complete the 60-day program in parallel.',
+    title: 'FAST-TRACK',
+    subhead: 'For consultants with active pipeline and the capital to move now.',
+    items: [
+      '$3,500 first year',
+      'Immediately CERTIFIED — 70% deal share from Day 1',
+      'Full platform features unlock at enrollment',
+      'All three AI agents active immediately',
+      'Complete the 60-day program in parallel',
+      'Annual renewal: $1,495',
+    ],
   },
   {
-    eyebrow: 'Path B - Earned track',
-    title: 'Start free.',
-    body: 'Start free. Begin closing engagements at a 30% deal share, climb through 40%, 50%, and 60% as you build a track record, and complete the 60-day program to reach 70%.',
+    title: 'EARN-AS-YOU-GROW',
+    subhead: 'For consultants building toward it.',
+    items: [
+      '$495 entry to start',
+      '60 days to close your first engagement and reach ACTIVATED',
+      '12 months total to reach CERTIFIED — through deals closed or by paying the $3,005 difference',
+      'Deal share climbs as you do: 40% → 50% → 60% → 70%',
+      'Full platform access from Day 1 — same agents, same methodology',
+      'Annual renewal: $1,495',
+    ],
   },
 ];
 
@@ -108,7 +71,7 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="The AI Learning Consultant Network"
+        eyebrow="THE AI LEARNING CONSULTANT NETWORK"
         headline="The standard for independent HR consulting."
         subhead={
           <p>
@@ -117,21 +80,20 @@ export default function HomePage() {
           </p>
         }
         primaryCta={{
-          href: LINKS.startCertification,
-          label: 'Start your certification',
+          href: LINKS.apply,
+          label: 'Apply to the network →',
         }}
         secondaryCta={{
-          href: '/for-practitioners',
-          label: 'For practitioners',
+          href: '#how-it-works',
+          label: 'See how it works',
         }}
-        supportingLine="For practitioners who want the analyst pool, benchmarks, and CFO-ready artifacts the big firms use to win."
       />
 
       <Section background="off-white">
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-blue">
-              For independent and boutique L&D consultants
+              FOR INDEPENDENT AND BOUTIQUE L&amp;D CONSULTANTS
             </p>
             <div className="mt-6">
               <SectionHeading headline="The honest assessment." />
@@ -144,20 +106,14 @@ export default function HomePage() {
               </p>
               <p>AILCN exists so you can.</p>
             </div>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8">
               <CTAButton
                 href="/for-practitioners"
                 variant="primary"
                 ariaLabel="Read the practitioner brief"
               >
-                Read the practitioner brief
+                Read the practitioner brief →
               </CTAButton>
-              <Link
-                className="inline-flex text-base font-semibold text-navy transition-colors duration-200 hover:text-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue"
-                href="/pricing"
-              >
-                See pricing and tiers
-              </Link>
             </div>
           </div>
           <PullQuote
@@ -167,95 +123,147 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section background="navy">
-        <SectionHeading headline="Why the independent consultant loses deals they should win." />
-        <p className="mb-10 max-w-4xl text-lg leading-8 text-white/80">
-          It&apos;s not skill. It&apos;s not effort. It&apos;s not even pricing. The independent
-          consultant loses to enterprise consultancies because of structural asymmetries in what
-          they can produce.
-        </p>
-        <div className="grid gap-6 md:grid-cols-2">
-          {asymmetryCards.map((card) => (
-            <Card
-              key={card.title}
-              eyebrow={card.eyebrow}
-              title={card.title}
-              body={<p>{card.body}</p>}
-              variant="on-navy"
-            />
-          ))}
-        </div>
-      </Section>
-
-      <Section background="off-white">
-        <SectionHeading headline="What changes when the platform is behind your work." />
-        <p className="mb-10 max-w-4xl text-lg leading-8 text-navy/85">
-          You retain your independence, your relationships, and your brand. You add three AI
-          agents that do the work an analyst pool would do at a Tier-1 consultancy — except
-          they&apos;re available continuously, on every client, at a fraction of the cost.
-        </p>
-        <div className="grid gap-6 md:grid-cols-3">
-          {agentCards.map((card) => (
-            <Card
-              key={card.title}
-              eyebrow={card.eyebrow}
-              title={card.title}
-              body={<p>{card.body}</p>}
-              variant="on-light"
-            />
-          ))}
-        </div>
-      </Section>
-
       <Section background="navy" id="how-it-works">
-        <SectionHeading headline="The standard, the platform, and the network." />
+        <SectionHeading headline="Three things, working together." />
         <div className="grid gap-6 md:grid-cols-3">
-          {networkPillars.map((pillar) => (
-            <Card
-              key={pillar.title}
-              eyebrow={pillar.eyebrow}
-              title={pillar.title}
-              body={<p>{pillar.body}</p>}
-              variant="on-navy"
-            />
-          ))}
+          <Card
+            eyebrow="CERTIFICATION"
+            title="The standard your client can recognize."
+            body={
+              <p>
+                A 60-day program built around the AILCN methodology — the 10-KPI framework plus 5
+                Health Dimensions that defines how AILCN consultants measure, diagnose, and
+                recommend. The credential tells the market your output is defensible.
+              </p>
+            }
+            variant="on-navy"
+          />
+          <Card
+            eyebrow="PLATFORM"
+            title="The analyst pool behind your practice."
+            body={
+              <>
+                <p>
+                  ExpandPro gives you three AI agents that do the work an analyst pool would do at
+                  a Tier-1 consultancy. Decision-grade diagnostics, CFO-ready investment memos, and
+                  meeting prep that keeps you ahead — continuously, on every client.
+                </p>
+                <Link
+                  className="inline-flex font-semibold text-blue transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  href="/for-practitioners#agents"
+                >
+                  See what the platform does →
+                </Link>
+              </>
+            }
+            variant="on-navy"
+          />
+          <Card
+            eyebrow="NETWORK"
+            title="The evidence you can cite."
+            body={
+              <p>
+                Cross-engagement benchmarks. Peer review of hard cases. Shared patterns. Referrals
+                between consultants. The network compounds — and your work gets stronger because
+                the network is in it.
+              </p>
+            }
+            variant="on-navy"
+          />
         </div>
+        <p className="mt-8 max-w-4xl text-lg leading-8 text-white/80">
+          Underneath those agents sit quarterly ExpandIntelligence briefs, predictive models, lead
+          magnets, and AILCN Connect — the platform layer that makes the output repeatable.
+        </p>
       </Section>
 
       <Section background="off-white">
-        <SectionHeading headline="Pay your way in — or earn it." />
-        <p className="max-w-4xl text-lg leading-8 text-navy/85">
-          You decide how you join. Both paths end in the same place: AILCN-certified, on the
-          directory, earning at the top deal-share rate the network supports.
+        <SectionHeading headline="What you deliver to clients." />
+        <p className="mb-8 max-w-4xl text-lg leading-8 text-navy/85">
+          Five engagement types. One platform. Your deal share applies to all of them.
+        </p>
+        <ul className="space-y-4 border-l border-blue pl-6 text-lg leading-8 text-navy/85">
+          {deliverables.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <div className="mt-8">
+          <CTAButton href="/pricing" variant="primary" ariaLabel="See full pricing">
+            See full pricing →
+          </CTAButton>
+        </div>
+      </Section>
+
+      <Section background="navy">
+        <SectionHeading headline="Two ways to start. One credential." />
+        <p className="max-w-4xl text-lg leading-8 text-white/80">
+          You decide how you join. Both paths end at the same destination: AILCN-certified, on the
+          directory, earning the top deal-share rate the network supports. The difference is timing
+          and economics.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {pathCards.map((card) => (
             <Card
               key={card.title}
-              eyebrow={card.eyebrow}
               title={card.title}
-              body={<p>{card.body}</p>}
-              variant="on-light"
+              body={
+                <>
+                  <p className="font-semibold text-white">{card.subhead}</p>
+                  <ul className="space-y-4 text-white/85">
+                    {card.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </>
+              }
+              variant="on-navy"
             />
           ))}
         </div>
-        <p className="mt-8 max-w-4xl text-lg leading-8 text-navy/85">
-          Veterans tend to take the paid track. Emerging consultants tend to take the earned track.
-          Both work. The only wrong choice is staying outside the network.
+        <p className="mt-8 max-w-5xl text-lg leading-8 text-white/80">
+          The same credential. The same platform. The same network. The same renewal rate. Choose
+          the path that fits where you are right now.
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-          <CTAButton href={LINKS.startCertification} variant="primary" ariaLabel="Apply to the network">
-            Apply to the network
+          <CTAButton href={LINKS.apply} variant="primary" ariaLabel="Apply to the network">
+            Apply to the network →
           </CTAButton>
-          <Link
-            className="inline-flex text-base font-semibold text-navy transition-colors duration-200 hover:text-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue"
-            href="/for-practitioners"
-          >
-            Read the full practitioner brief
-          </Link>
+          <CTAButton href="/pricing" variant="secondary" ariaLabel="See full pricing">
+            See full pricing →
+          </CTAButton>
         </div>
       </Section>
 
+      <Section background="off-white">
+        <SectionHeading headline="Why the independent consultant loses deals they should win." />
+        <p className="max-w-4xl text-lg leading-8 text-navy/85">
+          It&apos;s not skill. It&apos;s not effort. It&apos;s not even pricing. The independent
+          consultant loses to enterprise consultancies because of structural asymmetries in what
+          they can produce. AILCN closes those asymmetries — without making you work for a firm.
+        </p>
+        <div className="mt-8">
+          <CTAButton href="/for-practitioners" variant="primary" ariaLabel="See the four asymmetries">
+            See the four asymmetries →
+          </CTAButton>
+        </div>
+      </Section>
+
+      <Section background="navy">
+        <div className="max-w-4xl">
+          <SectionHeading headline="The standard for independent HR consulting is being written right now." />
+          <p className="text-xl leading-8 text-white/80">
+            Decide whether you&apos;re writing it or watching it.
+          </p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <CTAButton href={LINKS.apply} variant="primary" ariaLabel="Apply to the network">
+              Apply to the network →
+            </CTAButton>
+            <CTAButton href={LINKS.contact} variant="secondary" ariaLabel="Talk to a founder">
+              Talk to a founder
+            </CTAButton>
+          </div>
+        </div>
+      </Section>
     </>
   );
 }

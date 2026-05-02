@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
-import { Check, ChevronDown, X } from 'lucide-react';
+import { Check } from 'lucide-react';
 
+import { CTAButton } from '@/components/CTAButton';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { SectionHeading } from '@/components/SectionHeading';
+import { LINKS } from '@/lib/links';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Pricing — AILCN',
   description:
-    'Compare the Fast-Track and Earn-As-You-Grow certification paths, annual renewal, tier progression, and AILCN service pricing.',
+    'AILCN economics are designed to compound the more engagements you close. The network gets better as you do.',
 };
 
 type PricingTableProps = {
@@ -22,94 +24,62 @@ type PricingTableProps = {
   tone?: 'light' | 'dark';
 };
 
-const includedItems = [
-  '60-day AILCN certification program (10-KPI + 5 Health Dimensions methodology)',
-  'Access to ExpandPro platform (quarterly ExpandIntelligence briefs, predictive models, lead magnets)',
-  'AILCN certification badge (LinkedIn, website, proposals)',
-  'AILCN Connect community access',
-  'Directory listing on ailcn.org',
-  'Referral program ($500 credit toward renewal for each consultant you refer)',
-];
-
-const certificationRows: ReactNode[][] = [
-  [
-    <RowLabel key="upfront-cost">Upfront cost</RowLabel>,
-    '$3,500',
-    '$0',
-  ],
-  [
-    <RowLabel key="deal-share">Deal share</RowLabel>,
-    '70% from Day 1',
-    '40% -> 50% -> 60% -> 70%',
-  ],
-  [
-    <RowLabel key="first-deal">First deal (assume $50K)</RowLabel>,
-    'Keep $35,000',
-    'Keep $20,000 (40% tier)',
-  ],
-  [
-    <RowLabel key="second-deal">Second deal (assume $60K)</RowLabel>,
-    'Keep $42,000',
-    'Keep $30,000 (50% tier)',
-  ],
-  [
-    <RowLabel key="third-deal">Third deal (assume $65K)</RowLabel>,
-    'Keep $45,500',
-    'Keep $39,000 (60% tier)',
-  ],
-  [
-    <RowLabel key="net-after-three">Net after 3 deals</RowLabel>,
-    '$122,500 - $3,500 = $119,000',
-    '$89,000',
-  ],
-  [
-    <RowLabel key="you-keep">You keep</RowLabel>,
-    <span key="fast-track-advantage" className="font-semibold text-navy">
-      $30,000 more than free path
-    </span>,
-    'ExpandPro earns more from you',
-  ],
-  [
-    <RowLabel key="live-qa">Live Q&amp;A</RowLabel>,
-    <StatusText key="fast-track-live-qa" included>
-      Weekly sessions
-    </StatusText>,
-    <StatusText key="earned-live-qa" included={false}>
-      Recorded library only
-    </StatusText>,
-  ],
-  [
-    <RowLabel key="support">Support</RowLabel>,
-    <StatusText key="fast-track-support" included>
-      24-hour response
-    </StatusText>,
-    'Standard 5-day response',
-  ],
+const pathRows: ReactNode[][] = [
+  [<RowLabel key="upfront">Upfront cost</RowLabel>, '$3,500', '$495'],
+  [<RowLabel key="time">Time to CERTIFIED</RowLabel>, 'Day 1', 'Up to 12 months'],
+  [<RowLabel key="share-start">Deal share at start</RowLabel>, '70%', '40% (after first close)'],
+  [<RowLabel key="share-progression">Deal share progression</RowLabel>, 'Fixed at 70%', '40% → 50% → 60% → 70%'],
+  [<RowLabel key="access">Platform access</RowLabel>, 'Full features Day 1', 'Full features Day 1'],
+  [<RowLabel key="agents">AI Agents (all 3)</RowLabel>, 'Active immediately', 'Active immediately'],
+  [<RowLabel key="qa">Live Q&A</RowLabel>, 'Weekly sessions', 'Recorded library only'],
+  [<RowLabel key="support">Support</RowLabel>, '24-hour response', 'Standard 5-day response'],
   [
     <RowLabel key="best-for">Best for</RowLabel>,
-    'Active pipeline, confident you will close 2+ deals in 90 days',
-    'Building pipeline, want to de-risk',
+    "Active pipeline. Confident you'll close 2+ deals in 90 days.",
+    'Building pipeline. Want to start small.',
   ],
+];
+
+const mathRows: ReactNode[][] = [
+  [<RowLabel key="upfront-paid">Upfront paid</RowLabel>, '$3,500', '$495'],
+  [<RowLabel key="first-deal">First deal ($50K)</RowLabel>, 'Keep $35,000 (70%)', 'Keep $20,000 (40% tier)'],
+  [<RowLabel key="second-deal">Second deal ($60K)</RowLabel>, 'Keep $42,000 (70%)', 'Keep $30,000 (50% tier)'],
+  [<RowLabel key="third-deal">Third deal ($65K)</RowLabel>, 'Keep $45,500 (70%)', 'Keep $39,000 (60% tier)'],
+  [<RowLabel key="total-kept">Total kept after 3 deals</RowLabel>, '$122,500', '$89,000'],
+  [<RowLabel key="net-after-upfront">Net after upfront cost</RowLabel>, '$119,000', '$88,505'],
+  [<RowLabel key="difference">Difference</RowLabel>, '+$30,495 to Fast-Track', ''],
+];
+
+const includedItems = [
+  '60-day AILCN certification program (10-KPI + 5 Health Dimensions methodology)',
+  'Full ExpandPro platform access — Diagnostic, Prescriptive, and Strategic Agents',
+  'Quarterly ExpandIntelligence briefs',
+  'Predictive workforce models for turnover, capability, succession',
+  'Lead magnet library — branded with your name, generated by the platform',
+  'AILCN certification badge for LinkedIn, website, and proposals',
+  'AILCN Connect community access',
+  'Directory listing on ailcn.org',
+  'Referral program: $500 credit toward renewal for each consultant you refer',
 ];
 
 const renewalRows: ReactNode[][] = [
   [
-    <RowLabel key="annual-license">Annual</RowLabel>,
+    <RowLabel key="annual-renewal">Annual renewal</RowLabel>,
     '$1,495/year',
     'Updated methodology, new benchmarks, network access continuation, billed automatically annually',
   ],
 ];
 
-const tierRows: ReactNode[][] = [
+const ladderRows: ReactNode[][] = [
   [
     <RowLabel key="prospect">PROSPECT</RowLabel>,
     'N/A',
-    'Default starting tier — running diagnostics, registering leads',
+    'Default starting tier — running diagnostics, registering leads.',
   ],
   [
     <RowLabel key="activated">ACTIVATED</RowLabel>,
     '40%',
-    'Auto-grants on first close. 30-day hold before next tier.',
+    'First close. Must reach by Day 60 or be dropped. 30-day hold before next tier.',
   ],
   [
     <RowLabel key="activated-2">ACTIVATED-2</RowLabel>,
@@ -124,13 +94,21 @@ const tierRows: ReactNode[][] = [
   [
     <RowLabel key="certified">CERTIFIED</RowLabel>,
     '70%',
-    'Reached by completing the AILCN 60-day program (paid or earned)',
+    'Reached by completing the AILCN 60-day program — earned through engagements OR by paying the $3,005 difference outright. Must reach by Month 12 or be dropped.',
   ],
+];
+
+const cadenceItems = [
+  "Day 30: Status check — 'Where are you in your pipeline? Anything we can help unblock?'",
+  "Day 50: Activation reminder — 'Day 60 is approaching. Here's where you are.'",
+  "Month 6: Mid-year check — 'Halfway through your earning window. Here's the path from here.'",
+  "Month 9: Acceleration check — 'Three months left. If you're not on track, let's talk about your options.'",
+  "Month 11: Final notice — '30 days to CERTIFIED. Pay the difference or close one more deal — these are the options.'",
 ];
 
 const serviceRows: ReactNode[][] = [
   [
-    <RowLabel key="performance-diagnostic">Performance Diagnostic</RowLabel>,
+    <RowLabel key="performance">Performance Diagnostic</RowLabel>,
     'Free',
     'Top of funnel. Hand to every prospect.',
   ],
@@ -150,67 +128,14 @@ const serviceRows: ReactNode[][] = [
     'Continuous measurement. Recurring revenue you share with AILCN.',
   ],
   [
-    <RowLabel key="health-metrics">Health Metrics Assessment</RowLabel>,
+    <RowLabel key="health">Health Metrics Assessment</RowLabel>,
     '$3K-$8K',
     'Standalone organizational health time-series baseline.',
   ],
 ];
 
-const faqItems = [
-  {
-    question: 'Will I become a "platform reseller" instead of a consultant?',
-    answer:
-      'No. AILCN is built so you remain the trusted advisor. ExpandPro helps you produce evidence, benchmarks, artifacts, and meeting prep faster, but the strategy, recommendation, and client relationship are still yours.',
-  },
-  {
-    question: 'What happens if I stop renewing or leave the network?',
-    answer:
-      'Your client relationships remain yours. Non-renewal triggers a 90-day grace period, then platform access is suspended until you renew again.',
-  },
-  {
-    question: 'Why would someone choose Fast-Track over the free path?',
-    answer:
-      'If you already have an active pipeline and expect to close multiple deals quickly, Fast-Track usually wins on economics. You start at 70% from Day 1 and add weekly live Q&A plus faster support.',
-  },
-  {
-    question: 'What does the annual ExpandPro renewal actually cover?',
-    answer:
-      'The $1,495 annual renewal keeps your platform access active and keeps your methodology, benchmarks, and network access current for the year ahead.',
-  },
-  {
-    question: 'How long does certification take before I can use it?',
-    answer:
-      'The certification is designed as a 60-day path. Both pricing options lead to the same AILCN certification and the same core platform access.',
-  },
-  {
-    question: 'What kind of consultant is AILCN built for?',
-    answer:
-      'AILCN is built for serious independent consultants who already know how to run a real engagement and want stronger artifacts, better economics, and a defensible standard behind their work.',
-  },
-];
-
 function RowLabel({ children }: { children: ReactNode }) {
   return <span className="font-semibold text-navy">{children}</span>;
-}
-
-function StatusText({
-  children,
-  included,
-}: {
-  children: ReactNode;
-  included: boolean;
-}) {
-  const Icon = included ? Check : X;
-
-  return (
-    <span className="inline-flex items-center gap-2 font-medium text-navy">
-      <Icon
-        className={`h-4 w-4 shrink-0 ${included ? 'text-blue' : 'text-navy/50'}`}
-        aria-hidden="true"
-      />
-      <span>{children}</span>
-    </span>
-  );
 }
 
 function PricingTable({ caption, columns, rows, tone = 'light' }: PricingTableProps) {
@@ -265,29 +190,6 @@ function IncludedItem({ children }: { children: ReactNode }) {
   );
 }
 
-function FaqItem({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
-  return (
-    <details className="group rounded-2xl border border-white/10 bg-navy-soft">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-6 text-left text-lg font-semibold leading-7 text-white marker:content-none">
-        <span>{question}</span>
-        <ChevronDown
-          className="h-5 w-5 shrink-0 text-blue transition-transform duration-200 group-open:rotate-180"
-          aria-hidden="true"
-        />
-      </summary>
-      <div className="px-6 pb-6 text-base leading-8 text-white/80">
-        <p>{answer}</p>
-      </div>
-    </details>
-  );
-}
-
 export default function PricingPage() {
   return (
     <>
@@ -302,22 +204,48 @@ export default function PricingPage() {
       />
 
       <Section background="off-white">
-        <SectionHeading headline="Two paths to AILCN certification" />
+        <SectionHeading headline="Two paths to AILCN certification." />
         <p className="mb-8 max-w-4xl text-lg leading-8 text-navy/85">
-          Every consultant chooses the path that fits their business.
+          Every consultant chooses the path that fits their business. Both end at the same
+          destination — CERTIFIED tier, 70% deal share, full platform access. They differ only in
+          upfront cost and time-to-credential.
         </p>
         <PricingTable
-          caption="Certification path comparison"
+          caption="Path comparison"
           columns={['', 'FAST-TRACK', 'EARN-AS-YOU-GROW']}
-          rows={certificationRows}
+          rows={pathRows}
         />
-        <p className="mt-8 text-center text-lg leading-8 text-navy/85">
-          Both paths earn the same AILCN certification. The difference is timing and economics.
+        <p className="mt-8 text-lg leading-8 text-navy/85">
+          Both paths earn the same AILCN certification. The platform is identical. The only
+          differences are deal-share economics, support tier, and live-session access during ramp.
         </p>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold leading-tight text-navy md:text-3xl">
+            Earn-As-You-Grow: how the math works.
+          </h3>
+          <p className="mt-6 max-w-4xl text-lg leading-8 text-navy/85">
+            For a consultant on the Earn-As-You-Grow track, here&apos;s what three sequential deals
+            look like at typical engagement sizes:
+          </p>
+          <div className="mt-8">
+            <PricingTable
+              caption="Earn-As-You-Grow math"
+              columns={['', 'FAST-TRACK', 'EARN-AS-YOU-GROW']}
+              rows={mathRows}
+            />
+          </div>
+          <p className="mt-6 text-base italic leading-7 text-navy/65">
+            After the third deal closes, Earn-As-You-Grow consultants reach ACTIVATED-3 and remain
+            at 60% until they complete the 60-day AILCN program — at which point they reach
+            CERTIFIED at 70%, equal to Fast-Track. The $30,495 difference is what Earn-As-You-Grow
+            consultants pay AILCN over time for the option to enter without upfront capital.
+          </p>
+        </div>
       </Section>
 
       <Section background="navy">
-        <SectionHeading headline="What you get (both paths)" />
+        <SectionHeading headline="What every consultant gets — both paths." />
         <ul className="grid gap-4 md:grid-cols-2">
           {includedItems.map((item) => (
             <IncludedItem key={item}>{item}</IncludedItem>
@@ -326,51 +254,139 @@ export default function PricingPage() {
       </Section>
 
       <Section background="off-white">
-        <SectionHeading headline="Annual ExpandPro renewal (Year 2+)" />
+        <SectionHeading headline="Year 2 and beyond." />
         <p className="mb-8 max-w-4xl text-lg leading-8 text-navy/85">
-          Maintain platform access
+          Both paths converge to the same annual renewal. Renewal maintains your platform access,
+          certification status, network membership, and updated methodology library.
         </p>
         <PricingTable
-          caption="Annual renewal pricing"
-          columns={['PLAN', 'COST', 'WHAT IT INCLUDES']}
+          caption="Annual renewal"
+          columns={['PLAN', 'COST', 'INCLUDES']}
           rows={renewalRows}
         />
         <p className="mt-6 text-base italic leading-7 text-navy/65">
-          Non-renewal triggers a 90-day grace period, then account suspension.
+          Non-renewal triggers a 90-day grace period. After grace expires, the account is
+          suspended and the consultant is no longer listed in the directory or eligible to deliver
+          engagements through the platform. AILCN consultants are AILCN-certified or they&apos;re
+          not — there&apos;s no quiet middle.
         </p>
       </Section>
 
       <Section background="navy">
-        <SectionHeading headline="How the Earn-As-You-Grow ladder works" />
-        <PricingTable
-          caption="Earn-As-You-Grow ladder"
-          columns={['TIER', 'CONSULTANT SHARE', 'HOW TO REACH IT']}
-          rows={tierRows}
-          tone="dark"
-        />
-        <p className="mt-6 text-sm leading-6 text-muted">
-          Hold periods prevent gaming. Once you reach 70% tier, it&apos;s locked for life.
+        <SectionHeading headline="How the Earn-As-You-Grow ladder works." />
+        <p className="text-xl leading-8 text-white/80">The ladder, with two clocks.</p>
+        <p className="mt-6 max-w-5xl text-lg leading-8 text-white/80">
+          The Earn-As-You-Grow track has two non-negotiable deadlines built in. They exist because
+          the credential has to mean something. AILCN consultants are people who have actually
+          closed engagements — not people who joined a network and stayed at the entry tier
+          indefinitely.
         </p>
+        <div className="mt-8">
+          <PricingTable
+            caption="Earn-As-You-Grow ladder"
+            columns={['TIER', 'CONSULTANT SHARE', 'HOW TO REACH IT']}
+            rows={ladderRows}
+            tone="dark"
+          />
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold leading-tight text-white md:text-3xl">The two clocks.</h3>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className="rounded-2xl border border-white/10 bg-navy-soft p-8">
+              <h4 className="text-xl font-bold text-white">Day 60 — Activation deadline.</h4>
+              <div className="mt-4 space-y-4 text-base leading-8 text-white/80">
+                <p>
+                  A new Earn-As-You-Grow consultant must close at least one engagement through the
+                  platform and reach ACTIVATED tier within 60 days of joining. If not, the account
+                  is dropped. No extensions. No exceptions.
+                </p>
+                <p>
+                  This deadline exists to filter consultants who don&apos;t have the pipeline to close
+                  any engagement. AILCN can&apos;t carry consultants who have no momentum — it&apos;s bad
+                  for the network, and it&apos;s not honest about what AILCN is.
+                </p>
+              </div>
+            </article>
+            <article className="rounded-2xl border border-white/10 bg-navy-soft p-8">
+              <h4 className="text-xl font-bold text-white">Month 12 — Certification deadline.</h4>
+              <div className="mt-4 space-y-4 text-base leading-8 text-white/80">
+                <p>
+                  An Earn-As-You-Grow consultant must reach CERTIFIED tier within 12 months of
+                  joining. There are two ways to reach CERTIFIED:
+                </p>
+                <ol className="space-y-3 pl-6">
+                  <li>
+                    1. Climb the ladder through engagements closed AND complete the 60-day AILCN
+                    program (which can run in parallel with engagement work).
+                  </li>
+                  <li>
+                    2. Pay the $3,005 difference at any point during the 12 months to skip to
+                    CERTIFIED immediately.
+                  </li>
+                </ol>
+                <p>If neither happens by Month 12, the account is dropped.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold leading-tight text-white md:text-3xl">
+            Communication cadence.
+          </h3>
+          <p className="mt-6 max-w-4xl text-lg leading-8 text-white/80">
+            We don&apos;t surprise anyone. Earn-As-You-Grow consultants get structured check-ins along
+            the way:
+          </p>
+          <ul className="mt-8 space-y-4 border-l border-blue pl-6 text-lg leading-8 text-white/80">
+            {cadenceItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="mt-8 max-w-5xl text-lg leading-8 text-white/80">
+            If you&apos;re dropped, there&apos;s a 90-day cooling-off period and then re-entry is available
+            at full $495. No prior progress credit applies. Re-entry restarts both clocks.
+          </p>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold leading-tight text-white md:text-3xl">
+            Why the clocks exist.
+          </h3>
+          <p className="mt-6 max-w-5xl text-lg leading-8 text-white/80">
+            Hold periods between tiers prevent gaming. The two outer clocks (Day 60 and Month 12)
+            prevent dead weight. Together they ensure the credential — when it&apos;s earned — actually
+            means something. AILCN-certified consultants are people who closed real engagements
+            within a real timeframe.
+          </p>
+        </div>
       </Section>
 
       <Section background="off-white">
-        <SectionHeading headline="What consultants deliver (and what clients pay)" />
+        <SectionHeading headline="What consultants deliver — and what clients pay." />
         <p className="mb-8 max-w-4xl text-lg leading-8 text-navy/85">
-          These are the engagements you&apos;ll deliver on ExpandPro. Deal share applies to all.
+          These are the engagements you&apos;ll deliver on ExpandPro. Your deal share applies to all
+          of them.
         </p>
         <PricingTable
-          caption="Service catalog pricing"
+          caption="Service catalog"
           columns={['SERVICE', 'PRICE', 'WHEN TO USE IT']}
           rows={serviceRows}
         />
       </Section>
 
       <Section background="navy">
-        <SectionHeading headline="The straight answers." />
-        <div className="grid gap-4">
-          {faqItems.map((item) => (
-            <FaqItem key={item.question} question={item.question} answer={item.answer} />
-          ))}
+        <div className="max-w-4xl">
+          <SectionHeading headline="Ready to start?" />
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <CTAButton href={LINKS.apply} variant="primary" ariaLabel="Apply to the network">
+              Apply to the network →
+            </CTAButton>
+            <CTAButton href={LINKS.contact} variant="secondary" ariaLabel="Talk to a founder">
+              Talk to a founder
+            </CTAButton>
+          </div>
         </div>
       </Section>
     </>

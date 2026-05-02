@@ -80,12 +80,12 @@ export function Header() {
         </nav>
         <div className="hidden md:block">
           <CTAButton
-            href={LINKS.startCertification}
+            href={LINKS.apply}
             variant="primary"
-            ariaLabel="Start your certification"
+            ariaLabel="Apply to the network"
             className="px-5 py-2.5 text-sm"
           >
-            Start your certification
+            Apply to the network →
           </CTAButton>
         </div>
         <button
@@ -119,11 +119,11 @@ export function Header() {
             ))}
             <div className="pt-4">
               <CTAButton
-                href={LINKS.startCertification}
+                href={LINKS.apply}
                 variant="primary"
-                ariaLabel="Start your certification"
+                ariaLabel="Apply to the network"
               >
-                Start your certification
+                Apply to the network →
               </CTAButton>
             </div>
           </nav>

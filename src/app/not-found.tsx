@@ -13,11 +13,11 @@ export default function NotFound() {
         </h1>
         <div className="mt-10">
           <CTAButton
-            href={LINKS.startCertification}
+            href={LINKS.apply}
             variant="primary"
-            ariaLabel="Start your certification"
+            ariaLabel="Apply to the network"
           >
-            Start your certification
+            Apply to the network →
           </CTAButton>
         </div>
       </div>
