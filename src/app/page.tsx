@@ -117,7 +117,7 @@ export default function HomePage() {
             </div>
           </div>
           <PullQuote
-            quote='"The independent L&D consultant has been structurally outmatched for thirty years. The platform changes the math."'
+            quote='"The independent HR consultant has been structurally outmatched for thirty years. The platform changes the math."'
             attribution="Dr. Reggie Padin · Founder, AILCN"
           />
         </div>

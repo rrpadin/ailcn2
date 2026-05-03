@@ -13,7 +13,7 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'For Practitioners — AILCN',
   description:
-    'For independent and boutique L&D consultants who want the firepower of a 50-person consultancy without giving up their independence.',
+    'For independent and boutique HR consultants who want the firepower of a 50-person consultancy without giving up their independence.',
 };
 
 const asymmetries = [
@@ -169,7 +169,7 @@ export default function PractitionersPage() {
 
       <Section background="off-white" narrow>
         <PullQuote
-          quote='"The independent L&D consultant has been structurally outmatched for thirty years. The platform changes the math."'
+          quote='"The independent HR consultant has been structurally outmatched for thirty years. The platform changes the math."'
           attribution="Dr. Reggie Padin · Founder, AILCN"
         />
       </Section>
